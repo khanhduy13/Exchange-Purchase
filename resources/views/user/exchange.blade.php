@@ -86,13 +86,16 @@
                         <div style="display: flex">
                             <label class="title-name">Danh mục:</label>
                             <div class="col-sm-9">
-                                <select class="form-control" name="id_danhmuc"
-                                    style="margin-bottom: 30px; height: 34px;">
-                                    @foreach ($menus as $menu)
-                                        <option value="{{ $menu->id }}">
-                                            {{ $menu->name }}</option>
-                                    @endforeach
-                                </select>
+                            <select class="form-control" name="id_danhmuc" style="margin-bottom: 30px; height: 34px;">
+                            @foreach ($menus as $menu)
+                               @if ($menu->name != 'Tiền mặt')
+                            <option value="{{ $menu->id }}">
+                              {{ $menu->name }}
+                             </option>
+                             @endif
+                             @endforeach
+                        </select>
+
                             </div>
                         </div>
                         <div style="display: flex">

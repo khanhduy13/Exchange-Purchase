@@ -33,6 +33,9 @@
                                             <span style="font-size: 35px">
                                                 {!! \App\Helpers\Helper::trangthai($post->trangthai) !!}
                                             </span>
+                                            <div>
+                                                <h5><span>{{ $post->ghichu }}</span></h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

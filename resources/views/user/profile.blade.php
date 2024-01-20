@@ -1,6 +1,7 @@
 @include('user.header')
 <link rel="stylesheet" href="/template/dist/css/profile.css">
 
+
 <head>
     <title>Trang cá nhân</title>
     <meta charset="utf-8">

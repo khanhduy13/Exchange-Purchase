@@ -23,11 +23,14 @@ class Controller extends BaseController
         $totalPosts0 = Post::where('trangthai', '0')->count();
         $totalPosts1 = Post::where('trangthai', '1')->count();
         $totalPosts2 = Post::where('trangthai', '2')->count();
+        $sortedPosts = Post::all();
         // $totalUser = User::count();
         $totalUser = User::where('role_id', '2')->count();
         return view('admin.home', compact('totalPosts1', 'totalUser', 'totalPosts0', 'totalPosts2'), [
             'title' => 'Trang Admin',
+            'sortedPosts'=> $sortedPosts,
             'posts' => $this->PostAdservice->getdaduyet(),
+            
         ]);
     }
 

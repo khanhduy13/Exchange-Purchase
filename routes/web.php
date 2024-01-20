@@ -25,6 +25,7 @@ Route::get('forgotpw', [AuthController::class, 'forgotpw'])->name('forgotpw');
 Route::post('forgotpw_action', [AuthController::class, 'forgotpw_action']);
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
+
 Route::post('upload/services', [UploadController::class, 'store']);
 Route::middleware(['auth'])->group(function () {
 
@@ -65,6 +66,7 @@ Route::middleware(['auth'])->group(function () {
   });
   Route::middleware(['auth'])->group(function () {
     Route::prefix('user')->group(function () {
+
       Route::get('/newfeed', [UserController::class, 'show']);
       Route::get('/profile', [UserController::class, 'index']);
       Route::get('/resetpassword/{user}', [UserController::class, 'resetpw']);

@@ -29,7 +29,10 @@
                 <img name="Hinhanh" style="height: 280px; max-width: 420px !important; object-fit: fill"
                     class="form-control" placeholder="Full name" src="{{ $post->Hinhanh }} ">
             </div>
-
+            <label for="menu">Lý do từ chối</label>
+            <div class="input-group mb-3">
+                <input name="ghichu" class="form-control" value="{{ $post->ghichu }}" />
+            </div>
             <div class="form-group" style="margin-top: 50px">
                 <label>Chọn thao tác</label>
                 <div class="custom-control custom-radio">

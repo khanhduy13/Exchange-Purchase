@@ -54,7 +54,7 @@
                             <label class="custom-control-label" for="khachhang">Khách hàng</label>
                         </div>
 
-                    </div>
+                    </div>  
                     <div class="row">
 
                         <!-- /.col -->

@@ -24,6 +24,7 @@ class PostAdcontroller extends Controller
 
         ]);
     }
+    
     public function index2()
     {
         return view('admin.post.notapproved', [

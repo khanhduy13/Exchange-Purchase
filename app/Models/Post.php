@@ -22,6 +22,7 @@ class Post extends Model
         'Gia',
         'trangthai',
         'Phithu',
+        'ghichu',
     ];
     public function baidang()
     {

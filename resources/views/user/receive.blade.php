@@ -53,13 +53,27 @@
                                                     style="color: #ff1414;">{!! \App\Helpers\Helper::price($send->Gia) !!}đ</span>
                                             </h4>
                                             <span>
-                                                {!! \App\Helpers\Helper::trangthai1($send->trangthai) !!}
-                                            </span>
-                                    </div>
-                                    <button type="submit">
-                                        <a href="/user/accept/{{ $post->id }}-{{ $send->id }}">Trao
-                                            đổi</a>
-                                    </button>
+        {!! \App\Helpers\Helper::trangthai1($send->trangthai) !!}
+    </span>
+</div>
+
+@if($send->trangthai == 0)
+    <!-- Nếu trạng thái là 0, hiển thị nút "Trao đổi" -->
+    <button type="submit">
+        <a href="/user/accept/{{ $post->id }}-{{ $send->id }}">Trao đổi</a>
+    </button>
+@endif
+
+@if($send->trangthai != 0)
+    <!-- Nếu trạng thái khác 0, không hiển thị button -->
+    <!-- Bạn cũng có thể sử dụng thuộc tính style để ẩn button: style="display: none;" -->
+    <!-- Hoặc thêm class để ẩn: class="hidden" và sử dụng CSS để ẩn đi -->
+    <!-- Ví dụ với style -->
+    <button type="submit" style="display: none;">
+        <a href="/user/accept/{{ $post->id }}-{{ $send->id }}">Sửa</a>
+    </button>
+@endif
+
                                 </div>
                             </div>
                         @endforeach

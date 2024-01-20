@@ -15,6 +15,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
+
 class UserController extends BaseController
 {
 
@@ -99,5 +100,6 @@ class UserController extends BaseController
         return redirect()->back();
     }
 
-    // use AuthorizesRequests, ValidatesRequests;
+
+    
 }

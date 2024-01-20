@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }}</title>
 </head>
-<div class="container" style="margin-top: 80px">
+<div class="container" style="margin-top: 80px;">
     <div>
         <div class="receive_top_content">
             <img class="thumbnail" src="{{ $post->Hinhanh }}">
@@ -57,11 +57,11 @@
                 <div class="contact-form">
                     <div>
                         <input type="hidden" name="id_baidang" value="{{ $post->id }}">
-                        <span id="errorSpan" style="display: none; color: red;margin-left: 204px">* Số lượng muốn đổi
+                        <span id="errorSpan" style="display: none; color: red;margin-left: 204px">* Số lượng muốn mua
                             lớn hơn 0 và
                             không được lớn hơn số lượng còn!</span>
                         <div style="display: flex">
-                            <label class="title-name">Số lượng muốn đổi:</label>
+                            <label class="title-name">Số lượng muốn mua:</label>
                             <div class="col-sm-9">
                                 <input type="number" id="inputNumber1" class="form-control"
                                     placeholder="Nhập số lượng đồ vật bạn muốn nhận" name="Slmuondoi"
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div style="display: flex">
-                            <label class="title-name">Danh mục:</label>
+                            <label class="title-name">Phương Thức Thanh Toán:</label>
                             <div class="col-sm-9">
                                 <select class="form-control" name="id_danhmuc"
                                     style="margin-bottom: 30px; height: 34px;">

@@ -8,7 +8,7 @@
     <title>{{ $title }}</title>
 </head>
 <form method="POST">
-    <div style="margin-top: 80px; background-color: #ffffff;">
+    <div style="margin-top: 80px; background-color: #ffe59c;">
         <div class="container mt-5 mb-5" style="background-color: #ffffff;">
             <div class=" justify-content-center row">
                 <div class="col-md-10" style="margin-top: 10px">

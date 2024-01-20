@@ -121,12 +121,12 @@
                                 <p>Người dùng đã nạp</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="/admin/posts/totalformenu" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Theo danh mục</p>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a href="/admin/posts/phithu" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>

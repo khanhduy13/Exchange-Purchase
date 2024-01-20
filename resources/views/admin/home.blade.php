@@ -49,6 +49,50 @@
 
                 <!-- /.row (main row) -->
             </div><!-- /.container-fluid -->
+
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th style="width: 50px">STT</th>
+                <th>Tên Người Dùng</th>
+                <th style="text-align: center;">Tổng Phí Thu</th>
+            </tr>
+        </thead>
+        <tbody>
+            @php
+                $stt = 1;
+                $userTotalFees = [];
+            @endphp
+
+            @foreach ($sortedPosts as $key => $post)
+                @php
+                    // Kiểm tra xem người dùng đã xuất hiện chưa
+                    if (!isset($userTotalFees[$post->baidang->tennd])) {
+                        $userTotalFees[$post->baidang->tennd] = 0;
+                    }
+
+                    // Cộng phí thu vào tổng phí thu của người dùng
+                    $userTotalFees[$post->baidang->tennd] += $post->Phithu;
+                @endphp
+            @endforeach
+
+            {{-- Hiển thị thông tin người dùng và tổng phí thu --}}
+            @foreach ($userTotalFees as $userName => $totalFee)
+                <tr>
+                    <td>{{ $stt++ }}</td>
+                    <td><strong>{{ $userName }}</strong></td> 
+                    <td style="text-align: center;"><strong>{!! \App\Helpers\Helper::price($totalFee) !!}đ</strong></td>
+                    
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
     </section>
     @php
         $currentMonth = null;

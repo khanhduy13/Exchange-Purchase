@@ -19,7 +19,7 @@ class AuthController extends Controller
         $data['title'] = 'Đăng kí';
         return view('register', $data);
     }
-
+// trả về trang đăng ký và truyền 1 số dữ liệu cho trang
     public function register_action(Request $request)
     {
         $request->validate([
@@ -49,7 +49,7 @@ class AuthController extends Controller
 
         return redirect()->route('login');
     }
-
+    // Phương thức này xử lý đăng ký người dùng khi nhận được yêu cầu POST từ form đăng ký .$request->validate để kiểm tra tính hợp lệ
 
     public function login()
     {
@@ -90,7 +90,7 @@ class AuthController extends Controller
 
         return redirect('login')->with('error', 'Sai tài khoản hoặc mật khẩu');
     }
-
+    // Auth::attempt để thử đăng nhập và chuyển hướng
     public function password()
     {
         $data['title'] = 'Change Password';

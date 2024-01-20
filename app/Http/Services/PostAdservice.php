@@ -27,6 +27,7 @@ class PostAdservice
     }
     public function update($post, $request)
     {
+        $post->ghichu = $request->input('ghichu');
         $post->trangthai = $request->input('trangthai');
         $post->save();
         Session::flash('success', 'Duyệt bài thành công');

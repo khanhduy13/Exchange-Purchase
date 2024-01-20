@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class DuyetBaiDang extends Mailable
+class MyCustomEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -27,13 +27,19 @@ class DuyetBaiDang extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'My First Email',
+            subject: 'My Custom Email',
         );
     }
 
     /**
      * Get the message content definition.
      */
+    public function content(): Content
+    {
+        return new Content(
+            view: 'view.name',
+        );
+    }
 
     /**
      * Get the attachments for the message.
@@ -44,14 +50,4 @@ class DuyetBaiDang extends Mailable
     {
         return [];
     }
-
-    public function build()
-    {
-        return $this->view('emails.cancel')
-            ->subject('My First Email')
-            ->with([
-                'imagePath' => public_path('template/dist/img/avatar.png'),
-            ]);
-    }
-    
 }
